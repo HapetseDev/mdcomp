@@ -1,0 +1,26 @@
+# md_merger_config.yml
+output:
+  encoding: utf-8
+  line_ending: "\n"
+  add_toc: true
+  add_timestamps: true
+
+processing:
+  skip_empty_files: true
+  normalize_line_endings: true
+  remove_duplicate_headers: true
+
+separators:
+  between_files: "---"
+  add_file_headers: true
+  header_format: "<!-- Quelle: {filepath} -->"
+
+filters:
+  exclude_patterns:
+    - ".git"
+    - "__pycache__"
+    - ".DS_Store"
+    - "node_modules"
+  include_only:
+    - ".md"
+  max_file_size_mb: 10
